@@ -11,11 +11,24 @@ const Index = () => {
     onOpen();
   };
 
+  const [year, setYear] = React.useState(new Date().getFullYear());
+
+  const handleYearChange = (event) => {
+    setYear(event.target.value);
+  };
+
   return (
     <Box p={5}>
-      <Heading as="h1" size="xl" mb={6}>
-        Business Dashboard
-      </Heading>
+      <Flex justifyContent="space-between" alignItems="center">
+        <Heading as="h1" size="xl" mb={6}>
+          Business Dashboard
+        </Heading>
+        <select value={year} onChange={handleYearChange}>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+        </select>
+      </Flex>
       <SimpleGrid columns={2} spacing={10}>
         <StatBox icon={FaDollarSign} title="Revenue" amount="$30,000" percentage="4.5%" />
         <StatBox icon={FaShoppingCart} title="Sales" amount="1,500" percentage="3.8%" onClick={() => handleStatClick({ title: "Sales", thisMonth: "800", previousMonth: "700", total: "4500" })} />
