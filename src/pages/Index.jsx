@@ -12,6 +12,7 @@ const Index = () => {
         <StatBox icon={FaShoppingCart} title="Sales" amount="1,500" percentage="3.8%" />
         <StatBox icon={FaUsers} title="New Customers" amount="80" percentage="2.0%" />
         <StatBox icon={FaChartLine} title="Growth" amount="7.2%" percentage="1.1%" />
+        <StatBox icon={FaChartLine} title="Churn" amount="5%" percentage="0.5%" />
       </SimpleGrid>
     </Box>
   );
