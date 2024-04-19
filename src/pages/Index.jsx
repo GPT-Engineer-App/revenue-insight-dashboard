@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Box, Flex, Text, Stat, StatLabel, StatNumber, StatHelpText, StatArrow, SimpleGrid, Heading, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody } from "@chakra-ui/react";
 import { FaDollarSign, FaShoppingCart, FaUsers, FaChartLine } from "react-icons/fa";
 
@@ -40,7 +40,7 @@ const Index = () => {
 };
 
 const StatBox = ({ icon: Icon, title, amount, percentage, onClick }) => (
-  <Stat p={5} shadow="md" border="1px" borderColor="gray.200" onClick={onClick} cursor="pointer">
+  <Stat p={5} shadow="md" border="1px" borderColor="gray.200" onClick={onClick} cursor={onClick ? "pointer" : "default"}>
     <Flex alignItems="center">
       <Box fontSize="3xl" as={Icon} mr={2} />
       <StatLabel fontWeight="medium">{title}</StatLabel>
